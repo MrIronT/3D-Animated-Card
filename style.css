@@ -18,12 +18,15 @@ body {
 .product {
     width: 400px;
     height: 550px;
+    perspective: 1000px;
 }
 .product-inner{
     position: relative;
     width: 100%;
     height: 100%;
-
+    transform-style: preserve-3d;
+    transition: 1s;
+    transform: rotateY(-210deg);
 }
 .product-front{
     position: absolute;
@@ -77,8 +80,42 @@ body {
         font-size: 16px;
         outline: none;
         cursor: pointer;
-        margin: 20px auto 0;
-        
+        margin-top: 20px;
+    }
+    .color-select{
+        display: flex;
+        float: right;
+        margin-top: -30px;
+    }
+    .select-item{
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        padding: 5px;
+        box-shadow: -5px 0 8px 2px rgba(156, 216, 244, 0.5);
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+    }
+    .select-item img{
+        width: 90%;
+        padding-top: 10%;
 
+    }
 
+    .select-item:hover{
+        background: rgba(156, 216, 244, 0.5);
+        box-shadow: none;
+        transition: 0.5s;
+    }
+
+    .product-top2 {
+        background: linear-gradient(#c370fd, #3be1b8);
+    }
+    .product-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #fff;
+        transform: rotateY(180deg) translateZ(-25px);
     }
