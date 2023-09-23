@@ -8,6 +8,9 @@
 <body>
     <div class="container">
         <div class="product">
+            <img src="images/shoes.png" id="frontImg">
+            <img src="images/shoes2.png" id="backImg">
+
             <div class="product-inner" id="productBox">
                 <div class="product-front">
                     <div class="product-top"><h1>Nike</h1></div>
@@ -50,11 +53,25 @@
     </div>
     <script>
         var productBox = document.getElementById("productBox");
+        var frontImg = document.getElementById("frontImg");
+        var pbackImg = document.getElementById("backImg");
+
+
         function flipright(){
             productBox.style.transform = "rotateY(180deg)";
+            frontImg.style.left = "650px";
+            backImg.style.left = "0px";
+            frontImg.style.transform = "rotateZ(-30deg)";
+            backImg.style.transform = "rotateZ(0deg)";
+
+
         }
         function flipleft(){
             productBox.style.transform = "rotateY(0deg)";
+            frontImg.style.left = "0";
+            backImg.style.left = "-650px";
+            frontImg.style.transform = "rotateZ(0deg)";
+            backImg.style.transform = "rotateZ(-30deg)";
         }
     </script>
 </body>
