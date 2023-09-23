@@ -28,7 +28,7 @@ body {
     height: 100%;
     transform-style: preserve-3d;
     transition: 1s;
-    transform: rotateY(45deg);
+    
 }
 /* Rotate the card with the property above */
 
@@ -118,6 +118,7 @@ body {
     }
 
     .product-back {
+        
         width: 100%;
         height: 100%;
         position: absolute;

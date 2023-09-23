@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="product">
-            <div class="product-inner">
+            <div class="product-inner" id="productBox">
                 <div class="product-front">
                     <div class="product-top"><h1>Nike</h1></div>
                     <div class="product-bottom">
@@ -18,10 +18,10 @@
                         <button type="button">Add To Bag</button>
                         <div class="color-select">
                             <div class="select-item">
-                                <img src="images/shoes-icon.png" alt="">
+                                <img src="images/shoes-icon.png">
                             </div>
-                            <div class="select-item">
-                                <img src="images/shoes-icon2.png" alt="">
+                            <div class="select-item" onclick="flipright()">
+                                <img src="images/shoes-icon2.png">
                             </div>
                         </div>
                     </div>
@@ -34,11 +34,11 @@
                         <h1><span>$</span>125</h1>
                         <button type="button">Add To Bag</button>
                         <div class="color-select">
-                            <div class="select-item">
-                                <img src="images/shoes-icon.png" alt="">
+                            <div class="select-item" onclick="flipleft()">
+                                <img src="images/shoes-icon.png" >
                             </div>
                             <div class="select-item">
-                                <img src="images/shoes-icon2.png" alt="">
+                                <img src="images/shoes-icon2.png">
                             </div>
                         </div>
                     </div>
@@ -48,5 +48,14 @@
             </div>
         </div>
     </div>
+    <script>
+        var productBox = document.getElementById("productBox");
+        function flipright(){
+            productBox.style.transform = "rotateY(180deg)";
+        }
+        function flipleft(){
+            productBox.style.transform = "rotateY(0deg)";
+        }
+    </script>
 </body>
 </html>
